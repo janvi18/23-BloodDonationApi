@@ -36,3 +36,4 @@ const LinkedListSchema = new Schema({
 });
 
 module.exports = mongoose.model('LinkedList', LinkedListSchema);
+module.exports = mongoose.model('Node', nodeSchema);

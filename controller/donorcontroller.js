@@ -63,13 +63,12 @@ module.exports.getAllDonors = function (req, res) {
 module.exports.updateDonor = function (req, res) {
     let donorId = req.body.donorId
     let userName = req.body.userName
-    let email = req.body.email
+   // let email = req.body.email
     let bloodType = req.body.bloodType
     let contactNo = req.body.contactNo
 
     donorModel.updateOne({ _id: donorId }, {
-        userName: userName, email: email,
-        bloodType: bloodType, contactNo: contactNo
+        userName: userName, bloodType: bloodType, contactNo: contactNo
     }, function (err, data) {
         if (err) {
             console.log(err)
